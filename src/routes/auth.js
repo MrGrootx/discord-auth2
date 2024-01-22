@@ -10,7 +10,7 @@ router.get(
     failureRedirect: "/forbidden",
   }),
   (req, res) => {
-    res.send(200);
+    res.send(req.user);
   }
 );
 

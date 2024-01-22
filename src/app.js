@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 3001;
 import session from "express-session";
 import passport from "passport";
 import discordStrategy from "./strategies/discordstrategy.js";
+import db from "./DB/DBconnection.js";
+
+db.then(() => console.log('Connected to Database')).catch(err => console.log(err));
 
 // Routes
 import authRouter from "./routes/auth.js";
