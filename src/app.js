@@ -13,6 +13,7 @@ db.then(() => console.log('Connected to Database')).catch(err => console.log(err
 
 // Routes
 import authRouter from "./routes/auth.js";
+import dashboardRoute from "./routes/dashboard.js";
 
 app.use(
   session({
@@ -21,6 +22,7 @@ app.use(
       maxAge: 60000 * 60 * 24,
     },
     saveUninitialized: false,
+    name: "discord.oauth2",
   })
 );
 
@@ -28,8 +30,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 // Middleware
 app.use("/auth", authRouter);
+app.use("/dashboard", dashboardRoute);
 
 app.listen(PORT, () => {
   console.log("Now lestening on port", PORT);
