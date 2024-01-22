@@ -1,0 +1,6 @@
+https://www.npmjs.com/package/passport
+https://www.npmjs.com/package/passport-discord
+https://www.npmjs.com/package/dotenv
+https://www.npmjs.com/package/nodemon
+https://www.npmjs.com/package/express-session
+https://www.npmjs.com/package/express
